@@ -171,14 +171,6 @@ local function _update_view(lines)
 		vim.api.nvim_buf_add_highlight(buf, -1, "Error", k - 1, 2, 3)
 		vim.api.nvim_buf_add_highlight(buf, -1, "Underlined", k - 1, 2, 3)
 		if not matches[k].exists then
-			vim.api.nvim_buf_add_highlight(
-				buf,
-				-1,
-				"Underlined",
-				k - 1,
-				maxContextLength + 10,
-				maxContextLength + 10 + #newFileIndicator
-			)
 			vim.api.nvim_buf_add_highlight(buf, -1, "Conceal", k - 1, maxContextLength + 10 + #newFileIndicator + 1, -1)
 		end
 	end
