@@ -213,7 +213,7 @@ local function _buildWindow(linesCount)
 
 	win = vim.api.nvim_open_win(buf, true, window_config)
 	vim.api.nvim_win_set_option(win, "cursorline", true)
-	vim.api.nvim_win_set_option(win, "winhighlight", "Normal:NormalFloat,FloatBorder:NormalFloat")
+	vim.api.nvim_win_set_option(win, "winhighlight", "Normal:Normal,FloatBorder:FloatBorder")
 end
 
 -- -- -- -- -- -- -- -- -- -- PUBLIC -- -- -- -- -- -- -- -- --
